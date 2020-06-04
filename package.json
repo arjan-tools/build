@@ -1,0 +1,24 @@
+{
+  "name": "arjan-build",
+  "version": "0.1.0",
+  "description": "build required files/dirs for arjan. also helps you create an IAM user in the console.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjan-tools/build.git"
+  },
+  "keywords": [
+    "arjan",
+    "aws",
+    "iam"
+  ],
+  "author": "Gabriel Kardonski @gkpty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arjan-tools/build/issues"
+  },
+  "homepage": "https://github.com/arjan-tools/build#readme"
+}
