@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/arjan-tools/build/issues"
   },
-  "homepage": "https://github.com/arjan-tools/build#readme"
+  "homepage": "https://github.com/arjan-tools/build#readme",
+  "dependencies": {}
 }
