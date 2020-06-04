@@ -1,5 +1,4 @@
 const fs = require("fs");
-require('dotenv').config();
 
 const regionSet = [
   "us-east-2",
