@@ -1,7 +1,7 @@
+const fs = require("fs");
 require('dotenv').config();
-var fs = require("fs");
 
-let regionSet = [
+const regionSet = [
   "us-east-2",
   "us-east-1",
   "us-west-1",
@@ -50,27 +50,25 @@ function createDir(dir){
 }
 
 
-function initBuild(region, profile, callback){
+function initBuild(profile, region){
   return new Promise((resolve, reject) => {
     let env_file = "";
-    createDir('locales').catch(err => reject(err))
-    createDir('exports').then(()=> createDir('exports/csv')).catch(err => reject(err))
     if(profile){
-      if(/^[a-zA-Z0-9]*$/.test(profile)) env_file += `\nAWS_PROFILE=${profile}`
+      if(/^[+=,.@_\-a-zA-Z0-9]*$/.test(profile)) env_file += `AWS_PROFILE=${profile}`;
       else reject("AWS Profile invalid. Only alphanumeric characters accepted. No spaces.");
     }
     if(region){
-      if(regionSet.includes(region)) env_file += `\nAWS_REGION=${region}`
-      else reject("Invalid AWS region code")
+      if(regionSet.includes(region)) env_file += `\nAWS_REGION=${region}`;
+      else reject("Invalid AWS region code");
     }
-    createFile('./.env', env_file).catch(err => reject(err))
-    createFile('./.gitignore', '.env').catch(err => reject(err))
-    resolve('Built')
+    createDir('arjan_config');
+    createFile('./.env', env_file).catch(err => reject(err));
+    createFile('./.gitignore', '.env').then(() => resolve('Built')).catch(err => reject(err));
   })
 }
 
 //adds aws region to config and 
-function CreateIamUser(iamUserName, awsRegion) {
+function createIamUser(iamUserName, awsRegion) {
   return new Promise((resolve, reject) => {
     if(/^[+=,.@_\-a-zA-Z0-9]*$/.test(iamUserName)){
       var url = `https://console.aws.amazon.com/iam/home?region=${awsRegion}#/users$new?step=review&accessKey&userNames=${iamUserName}&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess`;
@@ -83,10 +81,9 @@ function CreateIamUser(iamUserName, awsRegion) {
   })
 }
 
-
 module.exports = {
   initBuild,
   createDir,
   createFile,
-  CreateIamUser
+  createIamUser
 }
