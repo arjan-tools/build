@@ -26,11 +26,11 @@ const regionSet = [
   "us-gov-west-1"
 ];
 
-function createFile(file, contents){
+function createFile(filePath, contents){
   return new Promise((resolve, reject) => {
-    if(fs.existsSync(file)) fs.promises.readFile(file, 'utf8').then(data => resolve(data)).catch(err => reject(err))
+    if(fs.existsSync(filePath)) fs.promises.readFile(filePath, 'utf8').then(data => resolve(data)).catch(err => reject(err))
     else {
-      fs.promises.writeFile(file, contents)
+      fs.promises.writeFile(filePath, contents)
       .then(() => resolve(contents))
       .catch(err => reject(err))
     }
