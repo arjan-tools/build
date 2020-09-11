@@ -1,26 +1,27 @@
 {
-  "name": "arjan-build",
-  "version": "0.1.0",
-  "description": "build required files/dirs for arjan. also helps you create an IAM user in the console.",
+  "name": "@torus-tools/config",
+  "version": "0.0.1",
+  "description": "Automatic project configuration module for torus tools",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arjan-tools/build.git"
+    "url": "git+https://github.com/torus-tools/config.git"
   },
   "keywords": [
-    "arjan",
+    "torus",
     "aws",
-    "iam"
+    "iam",
+    "configuration"
   ],
   "author": "Gabriel Kardonski @gkpty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arjan-tools/build/issues"
+    "url": "https://github.com/torus-tools/config/issues"
   },
-  "homepage": "https://github.com/arjan-tools/build#readme",
+  "homepage": "https://github.com/torus-tools/config#readme",
   "dependencies": {
     "public-ip": "^4.0.2"
   }
