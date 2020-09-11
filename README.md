@@ -3,9 +3,7 @@ In order to provide a seamless experience and eliminate any barriers to entry, t
 
 ## Features
 - Helps automate global as well as project configuration for all of the torus tools.
-
 - Lets you control your configuration settings, as well as your API keys, at a global and also a per-project basis.
-
 - Guides you through the necessary steps to generate the API keys for all of the different supported providers.
 
 ## How it works
