@@ -1,6 +1,6 @@
 {
   "name": "@torus-tools/config",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Automatic project configuration module for torus tools",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,5 @@
     "url": "https://github.com/torus-tools/config/issues"
   },
   "homepage": "https://github.com/torus-tools/config#readme",
-  "dependencies": {
-    "public-ip": "^4.0.2"
-  }
+  "dependencies": {}
 }
