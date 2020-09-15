@@ -1,6 +1,6 @@
 {
   "name": "@torus-tools/config",
-  "version": "0.0.121",
+  "version": "0.0.122",
   "description": "Automatic project configuration module for torus tools",
   "main": "index.js",
   "scripts": {
